@@ -1,0 +1,12 @@
+version: "2.0"
+rules:
+- rule: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Provide explanation
+  steps:
+  - intent: answer_question
+  - action: action_provide_explanation
+  - action: action_update_score

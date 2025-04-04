@@ -1,0 +1,25 @@
+version: "2.0"
+
+intents:
+  - greet
+  - answer_question
+
+entities:
+  - answer
+
+slots:
+  question:
+    type: text
+  answer:
+    type: text
+  score:
+    type: integer
+    initial_value: 0
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you today?"
+
+actions:
+  - action_provide_explanation
+  - action_update_score
